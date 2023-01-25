@@ -1,0 +1,111 @@
+.cards {
+    width: 370px;
+    height: 640px;
+    background-color: $color-light-grey;
+    position: relative;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    z-index: 0;
+
+    @media screen and (max-width:$mobile){
+        width: 250px;
+    }
+
+    &:hover {
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    &__price {
+        text-align: center;
+    }
+
+    &__price >img {
+        margin-top: 40px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        font-family: $title-font;
+        margin-top: 24px;
+    }
+
+    &__block {
+        max-width: 370px;
+        height: 390px;
+        background-image: url('../../image/bg-image.png');
+        margin-top: 30px;
+        text-align: center;
+        
+        &-icon {
+        margin: 40px;
+       }
+
+       &-item {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+
+       }
+       &-hidden-text {
+        text-align: center;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+        color: $color-dark-grey;
+        margin-top: 90px;
+        position: relative;
+        bottom: 145px;
+        display: none;
+       }
+    }
+
+    &__block-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 30px;
+        max-width: 167px;
+        height: 220px;
+        margin: auto;
+        text-align: left;
+    }
+    &__icon-hidden {
+        position: absolute;
+        right: -100px;
+        top: -32px;
+        display: none;
+        z-index: 100;
+
+        @media screen and (max-width:$desktop-small){
+            right: -45px;
+        }
+
+        &-tooipit{
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.cards:hover > .cards__block >.cards__block-hidden-text {
+    display: block;
+}
+.cards:hover > .cards__icon-hidden {
+    display: block;
+
+    @media screen and (max-width:$tablet-start){
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+.cards__block-button {
+    width: 200px;
+    height: 54px;
+    background:$color-blue-light;
+    border-radius: 30px;
+    padding: 20px 0;
+    margin: auto;
+    margin-top: 105px;
+}
+
+.cards__block-button > a {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    font-family: $title-font;
+}
+.cards:hover > .cards__block >.cards__block-button{
+    background: $color-red;
+    position: relative;
+    bottom: 70px;
+}
