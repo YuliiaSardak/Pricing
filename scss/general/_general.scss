@@ -35,11 +35,6 @@ body {
             }
 
             @media screen and (max-width:$tablet-start){
-                max-width: 600px;
-                gap: 20px;
-            }
-
-            @media screen and (max-width:$mobile){
                 flex-direction: column;
                 max-width: 300px;
                 gap: 60px;
